@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "data_workflow": "workflow:create_ml_workflow"
+  },
+  "env": ".env"
+}
