@@ -16,7 +16,7 @@ OPENAI_API_KEY=your_api_key_here
 
 ## Usage
 
-Use any analysis file as a template (e.g., `agents/breast_cancer_analysis.py`). 
+Use any analysis file as a template (e.g., `examples/breast_cancer/breast_cancer_analysis.py`). 
 
 Modify these 3 lines:
 1. `data = pd.read_csv('data.csv')` - change to your CSV file path
@@ -29,6 +29,6 @@ Example:
 ```
 
 ## Example Files
-- `agents/breast_cancer_analysis.py`
-- `agents/heart_failure_analysis.py` 
-- `agents/red_wine_analysis.py`
+- `examples/breast_cancer/breast_cancer_analysis.py`
+- `examples/heart_failure/heart_failure_analysis.py` 
+- `examples/wine_quality/red_wine_analysis.py`
