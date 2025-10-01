@@ -7,7 +7,7 @@ from utils.print_details import display_data_analysis_results, display_solution_
     display_target_analysis_results, display_improvement_details, display_feature_engineering_results, \
     display_validation_results, display_explanation_results
 from workflow import create_ml_workflow, get_analysis_results, get_validation_results, get_explanation_results, \
-    get_improvement_results, get_execution_results
+    get_improvement_results
 from utils.data_utils import create_data_summary_from_string
 
 load_dotenv()

@@ -2,22 +2,22 @@ import re
 
 
 def extract_model_type_from_code(code: str) -> str:
-    if "RandomForestClassifier" in code:
-        return "Random Forest Classifier"
-    elif "LogisticRegression" in code:
-        return "Logistic Regression"
-    elif "DecisionTreeClassifier" in code:
-        return "Decision Tree Classifier"
-    elif "SVC" in code or "SVM" in code:
-        return "Support Vector Machine"
-    elif "GradientBoostingClassifier" in code:
-        return "Gradient Boosting Classifier"
-    elif "LinearRegression" in code:
-        return "Linear Regression"
-    elif "RandomForestRegressor" in code:
-        return "Random Forest Regressor"
-    else:
-        return "Unknown Model Type"
+    model_mapping = {
+        "RandomForestClassifier": "Random Forest Classifier",
+        "GradientBoostingClassifier": "Gradient Boosting Classifier",
+        "DecisionTreeClassifier": "Decision Tree Classifier",
+        "LogisticRegression": "Logistic Regression",
+        "RandomForestRegressor": "Random Forest Regressor",
+        "LinearRegression": "Linear Regression",
+        "SVC": "Support Vector Machine",
+        "SVM": "Support Vector Machine"
+    }
+
+    for keyword, model_name in model_mapping.items():
+        if keyword in code:
+            return model_name
+
+    return "Unknown Model Type"
 
 
 def get_generated_code_from_messages(messages) -> dict:
@@ -78,22 +78,22 @@ def get_execution_results_from_messages(messages) -> dict:
 
 
 def extract_algorithm_from_code(code: str) -> str:
-    if "RandomForestClassifier" in code:
-        return "RandomForestClassifier"
-    elif "LogisticRegression" in code:
-        return "LogisticRegression"
-    elif "DecisionTreeClassifier" in code:
-        return "DecisionTreeClassifier"
-    elif "SVC" in code or "SVM" in code:
-        return "SVC"
-    elif "GradientBoostingClassifier" in code:
-        return "GradientBoostingClassifier"
-    elif "LinearRegression" in code:
-        return "LinearRegression"
-    elif "RandomForestRegressor" in code:
-        return "RandomForestRegressor"
-    else:
-        return "Unknown Model Type"
+    algorithms = {
+        "RandomForestClassifier": "RandomForestClassifier",
+        "LogisticRegression": "LogisticRegression",
+        "DecisionTreeClassifier": "DecisionTreeClassifier",
+        "SVC": "SVC",
+        "SVM": "SVC",
+        "GradientBoostingClassifier": "GradientBoostingClassifier",
+        "LinearRegression": "LinearRegression",
+        "RandomForestRegressor": "RandomForestRegressor"
+    }
+
+    for keyword, model_name in algorithms.items():
+        if keyword in code:
+            return model_name
+
+    return "Unknown Model Type"
 
 
 def extract_hyperparameters_from_code(code: str) -> dict:
